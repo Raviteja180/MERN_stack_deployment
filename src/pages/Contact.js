@@ -12,7 +12,7 @@ export default function Contact() {
       },
       body: JSON.stringify(formData),
     });
-    // console.log(formData);
+    console.log(response);
   };
   const handleChange = (e) => {
     setFormData({
