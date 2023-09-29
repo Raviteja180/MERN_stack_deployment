@@ -6,7 +6,7 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      "https://mern-stack-deployment.vercel.app/api",
+      "https://mern-stack-deployment2-api.vercel.app//api",
       {
         method: "POST",
         headers: {
