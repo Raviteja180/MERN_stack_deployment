@@ -5,14 +5,14 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
-app.listen(3001, () => {
-  console.log("bharath is crazy and is awesome");
-});
+// app.listen(3001, () => {
+//   console.log("bharath is crazy and is awesome");
+// });
 app.use(
   cors({
-    origin: "https://mern-stack-deployment.vercel.app/",
+    origin: "https://mern-stack-deployment.vercel.app",
     methods: ["GET", "POST"],
-    credentials:true,
+    credentials: true,
   })
 );
 app.use(express.json());
