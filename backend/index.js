@@ -40,9 +40,10 @@ app.get("/", function (req, res) {
 });
 app.post("/api", (req, res) => {
   console.log(req.body);
-  res.send(req.body);
+  // res.send(req.body);
   // console.log(req.body);
-  // const { username } = req.body;
+  const { username } = req.body;
+  res.send(username);
   // const dataDoc = new data({ name: username });
   // dataDoc
   //   .save()
