@@ -43,7 +43,7 @@ app.post("/api", (req, res) => {
   // res.send(req.body);
   // console.log(req.body);
   const { username } = req.body;
-  res.send(username);
+  // res.send(username);
   // const dataDoc = new data({ name: username });
   // dataDoc
   //   .save()
@@ -51,4 +51,8 @@ app.post("/api", (req, res) => {
   //   .catch((err) => {
   //     console.log(err);
   //   });
+  data
+    .create({ name: username })
+    .then((result) => res.json(result))
+    .catch((error) => res.json(error));
 });
