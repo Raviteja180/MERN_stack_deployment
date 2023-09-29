@@ -8,13 +8,13 @@ const bodyParser = require("body-parser");
 // app.listen(3001, () => {
 //   console.log("server is listening on 3001");
 // });
-// app.use(
-//   cors({
-//     origin: "https://mern-stack-deployment2-frontend.vercel.app",
-//     methods: ["GET", "POST"],
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://mern-stack-deployment2-frontend.vercel.app",
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 mongoose.connect(
   "mongodb+srv://Raviteja180:Raviteja180@cluster1.dusxcml.mongodb.net/forms?retryWrites=true&w=majority",
