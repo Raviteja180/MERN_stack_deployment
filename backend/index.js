@@ -40,14 +40,14 @@ app.get("/", function (req, res) {
 });
 app.post("/api", (req, res) => {
   console.log(req.body);
-  // res.send(req.body);
-  console.log(req.body);
-  const { username } = req.body;
-  const dataDoc = new data({ name: username });
-  dataDoc
-    .save()
-    .then((result) => res.send(result))
-    .catch((err) => {
-      console.log(err);
-    });
+  res.send(req.body);
+  // console.log(req.body);
+  // const { username } = req.body;
+  // const dataDoc = new data({ name: username });
+  // dataDoc
+  //   .save()
+  //   .then((result) => res.send(result))
+  //   .catch((err) => {
+  //     console.log(err);
+  //   });
 });
