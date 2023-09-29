@@ -19,8 +19,8 @@ export default function Contact() {
     axios
       .post("https://mern-stack-deployment2-api.vercel.app/api", { formData })
       .then((result) => console.log(result))
-      .catch((result) => console.log(error));
-    console.log(response);
+      .catch((error) => console.log(error));
+    // console.log(response);
   };
   const handleChange = (e) => {
     setFormData({
