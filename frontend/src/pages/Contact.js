@@ -1,9 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  // });
+  const [formData, setFormData] = useState();
   const handleSubmit = async (e) => {
     e.preventDefault();
     // const response = await fetch(
@@ -24,9 +25,7 @@ export default function Contact() {
     // console.log(response);
   };
   const handleChange = (e) => {
-    setFormData({
-      name: e.target.value,
-    });
+    setFormData(e.target.value);
   };
 
   return (
@@ -36,10 +35,10 @@ export default function Contact() {
         <input
           type="text"
           name="name"
-          value={formData.name}
+          value={formData}
           onChange={handleChange}
         />
-        {formData.name}
+        {formData}
         <button>submit</button>
       </form>
     </>
