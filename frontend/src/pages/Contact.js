@@ -4,7 +4,7 @@ export default function Contact() {
   // const [formData, setFormData] = useState({
   //   name: "",
   // });
-  const [formData, setFormData] = useState();
+  const [username, setFormData] = useState();
   const handleSubmit = async (e) => {
     e.preventDefault();
     // const response = await fetch(
@@ -19,7 +19,7 @@ export default function Contact() {
     // );
     axios.defaults.withCredentials = true;
     axios
-      .post("https://mern-stack-deployment2-api.vercel.app/api", { formData })
+      .post("https://mern-stack-deployment2-api.vercel.app/api", { username })
       .then((result) => console.log(result))
       .catch((error) => console.log(error));
     // console.log(response);
@@ -35,10 +35,10 @@ export default function Contact() {
         <input
           type="text"
           name="name"
-          value={formData}
+          value={username}
           onChange={handleChange}
         />
-        {formData}
+        {username}
         <button>submit</button>
       </form>
     </>
