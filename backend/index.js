@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
 // app.listen(3001, () => {
-//   console.log("bharath is crazy and is awesome");
+//   console.log("server is listening on 3001");
 // });
 app.use(
   cors({
