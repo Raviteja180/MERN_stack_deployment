@@ -16,7 +16,7 @@ export default function Contact() {
     //     body: JSON.stringify(formData),
     //   }
     // );
-    axios.defaults.withCredentials(true);
+    axios.defaults.withCredentials = true;
     axios
       .post("https://mern-stack-deployment2-api.vercel.app/api", { formData })
       .then((result) => console.log(result))
