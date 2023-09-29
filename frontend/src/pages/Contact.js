@@ -1,20 +1,25 @@
 import { useState } from "react";
+import axios from "axios";
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
   });
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(
-      "https://mern-stack-deployment2-api.vercel.app/api",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }
-    );
+    // const response = await fetch(
+    //   "https://mern-stack-deployment2-api.vercel.app/api",
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(formData),
+    //   }
+    // );
+    axios
+      .post("https://mern-stack-deployment2-api.vercel.app/api", { formData })
+      .then((result) => console.log(result))
+      .catch((result) => console.log(error));
     console.log(response);
   };
   const handleChange = (e) => {
