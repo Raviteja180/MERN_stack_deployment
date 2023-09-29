@@ -5,9 +5,9 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
-// app.listen(3001, () => {
-//   console.log("server is listening on 3001");
-// });
+app.listen(3001, () => {
+  console.log("server is listening on 3001");
+});
 app.use(
   cors({
     origin: "https://mern-stack-deployment2-frontend.vercel.app",
