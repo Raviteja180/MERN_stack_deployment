@@ -10,7 +10,7 @@ const bodyParser = require("body-parser");
 // });
 app.use(
   cors({
-    origin: "https://mern-stack-deployment.vercel.app",
+    origin: "https://mern-stack-deployment2-frontend.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
   })
