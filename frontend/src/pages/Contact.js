@@ -19,7 +19,7 @@ export default function Contact() {
     // );
     axios.defaults.withCredentials = true;
     axios
-      .post("https://mern-stack-deployment2-api.vercel.app/api", { username })
+      .post("https://mern-stack-deployment-eight.vercel.app/api", { username })
       .then((result) => console.log(result))
       .catch((error) => console.log(error));
     // console.log(response);
