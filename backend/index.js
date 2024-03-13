@@ -10,7 +10,7 @@ app.listen(3001, () => {
 });
 app.use(
   cors({
-    origin: "https://mern-stack-deployment2-frontend.vercel.app",
+    origin: "https://mern-stack-deployment-frontend3.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
   })
