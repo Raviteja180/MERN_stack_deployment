@@ -5,6 +5,7 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
+console.log("raviteja started working")
 app.listen(3001, () => {
   console.log("server is listening on 3001");
 });
